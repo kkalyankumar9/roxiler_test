@@ -26,7 +26,7 @@ getRoutes.get("/initialize", async (req, res) => {
 
 getRoutes.get("/alltransactions", async (req, res) => {
   try {
-    const { search = "", page = 1, per_page = 10 } = req.query;
+    const { search = "", page , per_page } = req.query;
 
     const pageNumber = parseInt(page) || 1;
     const perPage = parseInt(per_page) || 10;
